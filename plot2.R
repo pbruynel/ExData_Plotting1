@@ -11,12 +11,7 @@ col1 <- paste(df1$Date, df1$Time)
 df1 <- cbind(strptime(col1, format = "%d/%m/%Y %H:%M:%S"), df1[,c(3:9)])
 names(df1)[1] <- "Datetime"
 
-# Plot the histogram for Global Active Power in a PNG file named plot1.png
-#png(file = "plot2.png")
-#hist(df1$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
-#dev.off()
-# Sys.setenv(LANG = "en")
-# Sys.setlocale("LC_ALL", "en_US.UTF8")
-# ?Sys.setlocale
+# Plot the Global Active Power over the two days in a PNG file named plot2.png
+png(file = "plot2.png")
 plot(df1$Datetime, df1$Global_active_power, xlab = "", ylab = "Global Active Power (kilowatts)", type = "l")
-#myLocale <- Sys.getlocale()
+dev.off()
