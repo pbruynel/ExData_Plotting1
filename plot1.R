@@ -1,6 +1,6 @@
 # Read the data.
 # Read from file household_power_consumption.txt.
-# Only lines that start with 1/2/2007 or 1/2/2007.
+# Only lines that start with 1/2/2007 or 2/2/2007.
 library(data.table)
 colNames <- c("Date","Time","Global_active_power","Global_reactive_power","Voltage","Global_intensity","Sub_metering_1","Sub_metering_2","Sub_metering_3")
 colCls = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")
